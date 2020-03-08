@@ -1,0 +1,67 @@
+{
+  "name": "github-graphql-react-app",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --mode development --env --hot --inline --config webpack.config.development.js",
+    "build": "webpack --env.production --mode production --config webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "npm run build && gh-pages -d dist",
+    "generate": "graphql-codegen -r dotenv/config --config './codegen.yml'",
+    "generate:watch": "graphql-codegen -r dotenv/config --config './codegen.yml' --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hiraryo0213/github-graphql-react-app.git"
+  },
+  "author": "Ryoya HIRAYAMA",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hiraryo0213/github-graphql-react-app/issues"
+  },
+  "homepage": "https://github.com/hiraryo0213/github-graphql-react-app",
+  "dependencies": {
+    "apollo-boost": "^0.4.7",
+    "graphql": "^14.6.0",
+    "graphql-tag": "^2.10.3",
+    "react": "^16.13.0",
+    "react-apollo": "^3.1.3",
+    "react-dom": "^16.13.0",
+    "react-router-dom": "^5.1.2",
+    "ress": "^2.0.4"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^1.12.2",
+    "@graphql-codegen/typescript": "^1.12.2",
+    "@graphql-codegen/typescript-operations": "^1.12.2",
+    "@graphql-codegen/typescript-react-apollo": "^1.12.2",
+    "@types/react": "^16.9.23",
+    "@types/react-dom": "^16.9.5",
+    "@types/react-router-dom": "^5.1.3",
+    "@typescript-eslint/eslint-plugin": "^2.22.0",
+    "@typescript-eslint/parser": "^2.22.0",
+    "autoprefixer": "^9.7.4",
+    "css-loader": "^3.4.2",
+    "dotenv-webpack": "^1.7.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.18.3",
+    "node-sass": "^4.13.1",
+    "postcss-clean": "^1.1.0",
+    "postcss-loader": "^3.0.0",
+    "prettier": "^1.19.1",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.3",
+    "stylelint": "^13.2.0",
+    "stylelint-config-prettier": "^8.0.1",
+    "stylelint-config-recommended-scss": "^4.2.0",
+    "stylelint-prettier": "^1.1.2",
+    "stylelint-scss": "^3.14.2",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2"
+  }
+}

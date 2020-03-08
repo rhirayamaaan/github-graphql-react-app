@@ -1,0 +1,15 @@
+query App($login: String!) {
+  organization(login: $login) {
+    repositories(first: 5) {
+      nodes {
+        id
+        name
+        url
+        viewerHasStarred
+        stargazers {
+          totalCount
+        }
+      }
+    }
+  }
+}

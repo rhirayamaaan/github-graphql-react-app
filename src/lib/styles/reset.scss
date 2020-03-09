@@ -1,0 +1,235 @@
+@import "./variables";
+
+:root {
+  font: 13px/1.2 "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  color: $text-color;
+}
+
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+section,
+nav,
+aside,
+header,
+footer {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: inherit;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  -webkit-tap-highlight-color: $tap-highlight-color;
+
+  &:visited {
+    color: $link-color;
+  }
+}
+
+img,
+fieldset,
+iframe {
+  border: 0;
+}
+
+img {
+  background-color: $global-color-white;
+  color: $global-color-gray-2;
+  font-size: 10px;
+}
+
+label {
+  display: inline-block;
+  max-width: 100%;
+  border-radius: 0;
+  -webkit-tap-highlight-color: $tap-highlight-color;
+  vertical-align: middle;
+}
+
+input,
+button,
+select,
+textarea {
+  box-sizing: border-box;
+  max-width: 100%;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+  box-shadow: none;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: $tap-highlight-color;
+  color: $text-color;
+  font-size: inherit;
+}
+
+textarea {
+  appearance: none;
+  resize: vertical;
+  min-height: 3.6em;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="url"],
+textarea,
+select[multiple] {
+  appearance: none;
+  border-radius: 0;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: $global-color-gray-1;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  display: none;
+  -webkit-appearance: none;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: $global-color-gray-1;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: $global-color-gray-1;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+button {
+  appearance: button;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+button::-moz-focus-inner {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+input[type="file"] {
+  cursor: pointer;
+}
+
+input[type="text"][disabled],
+input[type="tel"][disabled],
+input[type="email"][disabled],
+input[type="number"][disabled],
+input[type="search"][disabled],
+input[type="button"][disabled],
+input[type="submit"][disabled],
+input[type="reset"][disabled],
+input[type="url"][disabled],
+button[disabled],
+select[disabled],
+textarea[disabled] {
+  color: $global-color-white;
+  -webkit-text-fill-color: currentColor;
+  opacity: 1;
+  -webkit-tap-highlight-color: transparent;
+  cursor: default;
+}
+
+input[type="button"]:disabled,
+input[type="submit"]:disabled {
+  opacity: 1;
+  cursor: default;
+}
+
+select {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: $global-color-white;
+}
+
+img,
+object,
+embed,
+canvas,
+audio,
+video,
+iframe {
+  vertical-align: top;
+}
+
+table {
+  box-sizing: border-box;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+table,
+th,
+td {
+  border: 1px solid $global-color-gray-1;
+}
+
+caption,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  text-align: left;
+}
+
+address,
+em,
+strong,
+th,
+dfn {
+  font-style: normal;
+}
+
+em,
+strong {
+  font-weight: bold;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}

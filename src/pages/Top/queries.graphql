@@ -1,0 +1,16 @@
+query Top($query: String!) {
+  search(query: $query, type: USER, first: 100) {
+    nodes {
+      ...users
+    }
+  }
+}
+
+fragment users on User {
+  id
+  bio
+  name
+  url
+  avatarUrl(size: 200)
+  login
+}

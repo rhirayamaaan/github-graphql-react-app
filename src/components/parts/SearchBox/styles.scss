@@ -1,1 +1,42 @@
 @import "../../../lib/styles/variables";
+
+.searchBox {
+  $height: 40px;
+
+  display: flex;
+  height: 40px;
+
+  & &__input {
+    flex-grow: 1;
+    border: 1px solid $global-color-white;
+    border-radius: 4px 0 0 4px;
+    background-color: $global-color-white;
+    padding: 0 12px;
+    height: inherit;
+    color: $text-color;
+
+    &:disabled {
+      color: $text-color;
+    }
+
+    &:focus {
+      outline: none;
+      border: 2px solid $global-color-purple-2;
+      padding: 0 11px;
+    }
+  }
+
+  & &__submit {
+    flex-shrink: 1;
+    border: 1px solid $global-color-white;
+    border-left: 0;
+    border-radius: 0 4px 4px 0;
+    background-color: $global-color-black;
+    width: 60px;
+    height: inherit;
+  }
+
+  & &__submitIcon {
+    fill: $global-color-white;
+  }
+}

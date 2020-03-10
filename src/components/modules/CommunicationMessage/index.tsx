@@ -16,7 +16,7 @@ interface CommunicationMessageProps {
 const CommunicationMessageNetworkError: FC<{ type?: CommunicationMessageTypes }> = ({ type }) =>
   type === CommunicationMessageTypes.NETWORK_ERROR ? (
     <>
-      <h2 className={styles.communicationMessage__title}>エラーが発生しました</h2>
+      <h2 className={styles.communicationMessage__title}>エラーが発生しました。</h2>
       <p className={styles.communicationMessage__description}>
         通信中に問題が発生しました。時間を空けて再度お試しください。
       </p>
@@ -26,7 +26,7 @@ const CommunicationMessageNetworkError: FC<{ type?: CommunicationMessageTypes }>
 const CommunicationMessageError: FC<{ type?: CommunicationMessageTypes }> = ({ type }) =>
   type === CommunicationMessageTypes.ERROR ? (
     <>
-      <h2 className={styles.communicationMessage__title}>エラーが発生しました</h2>
+      <h2 className={styles.communicationMessage__title}>エラーが発生しました。</h2>
       <p className={styles.communicationMessage__description}>
         予期せぬエラーが発生しました。解消されない場合は<a href="mailto:hiraryo.0213@gmail.com">こちら</a>
         にご連絡ください。
@@ -37,7 +37,7 @@ const CommunicationMessageError: FC<{ type?: CommunicationMessageTypes }> = ({ t
 const CommunicationMessageZeroMatch: FC<{ type?: CommunicationMessageTypes }> = ({ type }) =>
   type === CommunicationMessageTypes.ZERO_MATCH ? (
     <>
-      <h2 className={styles.communicationMessage__title}>検索結果がありませんでした</h2>
+      <h2 className={styles.communicationMessage__title}>検索結果がありませんでした。</h2>
       <p className={styles.communicationMessage__description}>別の単語で、再度検索し直してください。</p>
     </>
   ) : null;

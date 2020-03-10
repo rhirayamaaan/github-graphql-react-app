@@ -10,9 +10,7 @@ interface LoadingProps {
 const Loading: FC<LoadingProps> = ({ isLoading = false, className = '', children }) =>
   isLoading ? (
     <div className={[styles.loading, className].join(' ').trim()}>
-      <div className={styles.loading__item} aria-label="Loading...">
-        Loading...
-      </div>
+      <div className={styles.loading__item} aria-label="Loading..."></div>
     </div>
   ) : children ? (
     <>{children}</>

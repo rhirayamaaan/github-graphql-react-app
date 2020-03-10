@@ -1,1 +1,21 @@
 @import "../../../lib/styles/variables";
+
+.globalHeader {
+  padding: 32px;
+  background-color: $global-color-black;
+
+  & &__inner {
+    margin: 0 auto;
+    max-width: $page-max-width;
+  }
+
+  & &__title {
+    color: $global-color-white;
+    font-size: 21px;
+    text-align: center;
+  }
+
+  & &__search {
+    margin-top: 16px;
+  }
+}

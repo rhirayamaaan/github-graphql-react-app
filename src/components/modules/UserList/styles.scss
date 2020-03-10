@@ -1,1 +1,112 @@
 @import "../../../lib/styles/variables";
+
+.userList {
+  margin: 0 auto;
+  max-width: $page-max-width;
+  word-wrap: break-word;
+  word-break: break-all;
+
+  & &__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -20px 0 0 -20px;
+  }
+
+  & &__item {
+    display: flex;
+    width: 25%;
+
+    @media (max-width: 767px) {
+      width: 33.33%;
+    }
+
+    @media (max-width: 620px) {
+      width: 50%;
+    }
+
+    @media (max-width: 374px) {
+      width: 100%;
+    }
+  }
+
+  & &__itemLink {
+    display: block;
+    flex-grow: 1;
+    margin: 20px 0 0 20px;
+    border: 1px solid $global-color-gray-3;
+    min-width: 1px;
+    color: inherit;
+  }
+
+  & &__itemHead {
+    padding: 8px 15px;
+    background-color: $global-color-gray-3;
+  }
+
+  & &__itemAvatar {
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    border: 1px solid $global-color-white;
+    border-radius: 100px;
+    background-color: $global-color-gray-4;
+    box-shadow: 1px 1px 4px $global-color-gray-2;
+  }
+
+  & &__itemAvatarImage {
+    position: absolute;
+    margin: auto;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  & &__itemMain {
+    margin-top: -44px;
+    padding: 44px + 8px 15px 16px 15px;
+    background-color: $global-color-white;
+  }
+
+  & &__itemName {
+    font-weight: bold;
+  }
+
+  & &__itemLogin {
+    font-size: 11px;
+    color: $text-color-sub;
+  }
+
+  & &__itemName + &__itemLogin {
+    margin-top: 4px;
+  }
+
+  & &__itemBio {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 11px;
+    white-space: nowrap;
+    color: $text-color-sub;
+  }
+
+  & &__itemName + &__itemBio,
+  & &__itemLogin + &__itemBio {
+    margin-top: 8px;
+  }
+
+  @media (min-width: 620px) {
+    & &__itemLink:hover {
+      color: $link-color;
+    }
+
+    & &__itemLink:hover &__itemLogin,
+    & &__itemLink:hover &__itemBio {
+      color: inherit;
+    }
+  }
+}

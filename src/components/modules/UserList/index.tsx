@@ -28,21 +28,19 @@ const UserList: FC<UserListProps> = ({ users = [], className = '' }) =>
         {users.map(user => (
           <li className={styles.userList__item} key={user.id}>
             <a href={user.url} target="_blank" className={styles.userList__itemLink}>
-              <div className={styles.userList__itemColumns}>
-                <div className={styles.userList__itemColumn1}>
-                  <div className={styles.userList__itemAvatar}>
-                    <img
-                      src={user.avatarUrl}
-                      alt={`${user.login}'s avatar`}
-                      className={styles.userList__itemAvatarImage}
-                    />
-                  </div>
+              <div className={styles.userList__itemHead}>
+                <div className={styles.userList__itemAvatar}>
+                  <img
+                    src={user.avatarUrl}
+                    alt={`${user.login}'s avatar`}
+                    className={styles.userList__itemAvatarImage}
+                  />
                 </div>
-                <div className={styles.userList__itemColumn2}>
-                  <p className={styles.userList__itemLogin}>{user.login}</p>
-                  <UserListItemName name={user.name} />
-                  <UserListItemBio bio={user.bio} />
-                </div>
+              </div>
+              <div className={styles.userList__itemMain}>
+                <UserListItemName name={user.name} />
+                <p className={styles.userList__itemLogin}>@{user.login}</p>
+                <UserListItemBio bio={user.bio} />
               </div>
             </a>
           </li>

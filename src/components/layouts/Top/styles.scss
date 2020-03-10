@@ -1,1 +1,7 @@
 @import "../../../lib/styles/variables";
+
+.top {
+  & &__main {
+    padding: 32px;
+  }
+}

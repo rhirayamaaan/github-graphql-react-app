@@ -16,9 +16,11 @@ const GlobalHeader: FC<GlobalHeaderProps> = ({
   onSearchSubmit
 }) => (
   <div className={[styles.globalHeader, className].join(' ').trim()}>
-    <h1 className={styles.globalHeader__title}>Users Search Service for Github</h1>
-    <div className={styles.globalHeader__search}>
-      <SearchBox isDisabled={isSearchDisabled} query={query} onSubmit={onSearchSubmit} />
+    <div className={styles.globalHeader__inner}>
+      <h1 className={styles.globalHeader__title}>Users Search Service for Github</h1>
+      <div className={styles.globalHeader__search}>
+        <SearchBox isDisabled={isSearchDisabled} query={query} onSubmit={onSearchSubmit} />
+      </div>
     </div>
   </div>
 );

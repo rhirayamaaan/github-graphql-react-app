@@ -1,1 +1,44 @@
 @import "../../../lib/styles/variables";
+
+.loading {
+  padding: 40px;
+
+  $icon-size: 48px;
+
+  & &__item {
+    position: relative;
+    margin: 0 auto;
+    width: $icon-size;
+    height: $icon-size;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      border: 6px solid;
+      border-radius: $icon-size;
+      width: inherit;
+      height: inherit;
+    }
+
+    &::before {
+      border-color: $global-color-gray-3;
+    }
+
+    &::after {
+      animation: 0.8s infinite linear;
+      animation-name: loading-circle;
+      border-color: $global-color-gray-1 transparent transparent transparent;
+
+      @keyframes loading-circle {
+        0% {
+          transform: rotate(0);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    }
+  }
+}

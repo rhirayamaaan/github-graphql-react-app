@@ -1,9 +1,3 @@
-// const webpack = require('webpack');
-const Dotenv = require('dotenv-webpack');
-const path = require('path');
-
-// console.log('REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN', process.env.REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN);
-
 const createStyleLoaders = isProduction => [
   'style-loader',
   {
@@ -64,6 +58,5 @@ module.exports = env => ({
         ]
       }
     ]
-  },
-  plugins: [new Dotenv()]
+  }
 });

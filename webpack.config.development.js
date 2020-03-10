@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const Dotenv = require('dotenv-webpack');
 const merge = require('webpack-merge');
 const config = require('./webpack.config');
 
@@ -16,6 +17,7 @@ module.exports = env =>
     devtool: 'inline-source-map',
     plugins: [
       // hotモードに必要なプラグイン
-      new webpack.HotModuleReplacementPlugin()
+      new webpack.HotModuleReplacementPlugin(),
+      new Dotenv()
     ]
   });

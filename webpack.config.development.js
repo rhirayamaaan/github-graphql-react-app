@@ -9,6 +9,7 @@ module.exports = env =>
       contentBase: './build',
       hot: true,
       inline: true,
+      open: true,
       historyApiFallback: true
     },
     // ソースマップの設定

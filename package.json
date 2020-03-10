@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --mode development --env --config webpack.config.development.js",
-    "build": "\\cp -f ./static/index.html ./build/index.html && npm run generate && webpack --env.production --mode production --config webpack.config.js",
+    "build": "\\cp -f ./public/index.html ./build/index.html && npm run generate && webpack --env.production --mode production --config webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "npm run build && gh-pages -d build",
     "generate": "graphql-codegen -r dotenv/config --config './codegen.yml'",

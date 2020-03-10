@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --mode development --env --config webpack.config.development.js",
-    "build": "webpack --env.production --mode production --config webpack.config.js",
+    "build": "\\cp -f ./static/index.html ./build/index.html && npm run generate && webpack --env.production --mode production --config webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "npm run build && gh-pages -d dist",
+    "deploy": "npm run build && gh-pages -d build",
     "generate": "graphql-codegen -r dotenv/config --config './codegen.yml'",
     "generate:watch": "graphql-codegen -r dotenv/config --config './codegen.yml' --watch"
   },
@@ -48,6 +48,7 @@
     "dotenv-webpack": "^1.7.0",
     "eslint": "^6.8.0",
     "eslint-plugin-react": "^7.18.3",
+    "gh-pages": "^2.2.0",
     "node-sass": "^4.13.1",
     "postcss-clean": "^1.1.0",
     "postcss-loader": "^3.0.0",

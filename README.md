@@ -15,17 +15,18 @@ $ npm ci
 
 ### Personal access token の発行
 
-1. https://github.com/settings/tokens にアクセスする
-1. **Generate New Token** をクリックする
-1. **Note** に任意の文字列（例：`github-graphql-react-app`）を入力する。
-1. **Select scopes** の **read:user** にチェックを入れる。
+- https://github.com/settings/tokens にアクセスする
+- **Generate New Token** をクリックする
+- **Note** に任意の文字列（例：`github-graphql-react-app`）を入力する。
+- **Select scopes** の **read:user** にチェックを入れる。
 
-- ![image](https://user-images.githubusercontent.com/10681108/76375668-bbc2da00-6389-11ea-8a51-828de2f262a8.png)
+![image](https://user-images.githubusercontent.com/10681108/76375668-bbc2da00-6389-11ea-8a51-828de2f262a8.png)
 
-1. **Generate Token** をクリックする。
-1. 作成に成功すると、Token がページに現れるため、それをメモしておく。
+- **Generate Token** をクリックする。
+- 作成に成功すると、Token がページに現れるため、それをメモしておく。（キャプチャの Token は書き換えてあります。）
 
-- ![image](https://user-images.githubusercontent.com/10681108/76374843-a482ed00-6387-11ea-9ed8-d249f32e2bb9.png)
+![image](https://user-images.githubusercontent.com/10681108/76374843-a482ed00-6387-11ea-9ed8-d249f32e2bb9.png)
+
 
 ### `.env` の作成
 

@@ -19,10 +19,13 @@ $ npm ci
 1. **Generate New Token** をクリックする
 1. **Note** に任意の文字列（例：`github-graphql-react-app`）を入力する。
 1. **Select scopes** の **read:user** にチェックを入れる。
-  - ![image](https://user-images.githubusercontent.com/10681108/76375668-bbc2da00-6389-11ea-8a51-828de2f262a8.png)
+
+- ![image](https://user-images.githubusercontent.com/10681108/76375668-bbc2da00-6389-11ea-8a51-828de2f262a8.png)
+
 1. **Generate Token** をクリックする。
 1. 作成に成功すると、Token がページに現れるため、それをメモしておく。
-  - ![image](https://user-images.githubusercontent.com/10681108/76374843-a482ed00-6387-11ea-9ed8-d249f32e2bb9.png)
+
+- ![image](https://user-images.githubusercontent.com/10681108/76374843-a482ed00-6387-11ea-9ed8-d249f32e2bb9.png)
 
 ### `.env` の作成
 
@@ -40,4 +43,5 @@ REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN=abcdefghijklmnopqrstuvwxyz0123456789abcd
 $ npm run dev
 ```
 
-現状、`npm run build` で実行しても、Token が除かれた状態でビルドされるので認証エラーになってしまいます。
+実行すると、`http://localhost:8080/` にアクセスした状態でブラウザが自動で起動します。  
+また、現状 `npm run build` で実行しても、Token が除かれた状態でビルドされるので認証エラーになってしまうので、`npm run dev` でお願いいたします。
